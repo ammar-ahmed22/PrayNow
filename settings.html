@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="settings__container">
+        <h1 class="settings__heading">
+            Settings
+        </h1>
+
+        <h1 class="setting__section">Location</h1>
+        <div class="form">
+            <input type="text" id="city" placeholder="Enter city">
+            <br>
+            <input type="text" id="country" placeholder="Enter country">
+            <br>
+            
+        </div>
+
+        <h1 class="setting__section">Advanced Settings</h1>
+        <div class="setting">
+            <h1 class="setting__text" id='school__text'>Change to Shaafi School</h1>
+            <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+        </div>
+        
+
+        <div class="setting">
+            <h1 class="setting__text">Method of Calculation</h1>
+            <select name="method" id="method" class="method">
+                <option value="none" disabled selected>Choose an option</option>
+                <option value="0">Shia Ithna-Asari</option>
+                <option value="1">University of Islamic Sciences, Karachi</option>
+                <option value="2">Islamic Society of North America</option>
+                <option value="3">Muslim World League</option>
+                <option value="4">Umm Al-Qura University, Makkah</option>
+                <option value="5">Egyptian General Authority of Survey</option>
+                <option value="7">Institute of Geophysics, University of Tehran</option>
+                <option value="8">Gulf Region</option>
+                <option value="9">Kuwait</option>
+                <option value="10">Qatar</option>
+                <option value="11">Majlis Ugama Islam Singapura, Singapore</option>
+                <option value="12">Union Organization Islamic de France</option>
+                <option value="13">Diyanet Isleri Baskanligi, Turkey</option>
+                <option value="14">Spiritual Administration of Muslims of Russia</option>
+            </select>
+        </div>
+        <div class="submit__div">
+            <button class="submit__button" id="submit">Save!</button>
+        </div>
+    </div>
+    
+
+    <a href="athan.html" class="back__link"><i class='bx bx-left-arrow-alt'></i></a>
+</body>
+
+<script src="settings.js"></script>
+</html>

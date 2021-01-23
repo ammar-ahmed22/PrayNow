@@ -1,0 +1,182 @@
+
+/* Base Settings */
+/* Variable Declaration */
+:root {
+    --black: #161516;
+    --darkest-blue: #244d70;
+    --dark-blue: #465a6b;
+    --brown: #4C3F30;
+    --blue: #123c87;
+}
+
+/* Base Settings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid #fff;
+    color: #fff;
+    text-align: center;
+    font-family: "Cairo", "sans-serif";
+}
+
+::placeholder{
+    color: #fff;
+    text-align: center;
+    font-family: "Cairo", "sans-serif";
+}
+
+
+body{
+    width: 600px;
+    height: 275px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blue);
+    font-family: 'Cairo', 'sans-serif';
+}
+
+/* Form */
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.submit__div{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.settings__container{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--blue);
+    width: 300px;
+    padding: 10px 10px 10px 10px ;
+    border-radius: 10px;
+}
+
+.settings__heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.back__link{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 48px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* Settings */
+.setting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting__text{
+    font-size: 16px;
+    margin-right: 45px;
+    color: #fff;
+}
+
+.setting__section{
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+
+.section__span{
+    border-bottom: 2px solid var(--black);
+}
+
+#school__text{
+    margin-right: 52px;
+}
+
+/* Slider */
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 32px;
+	height: 18px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+    position: relative;
+    margin-left: 45px;
+    
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #2196f3;
+}
+
+input:checked + label:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 40px;
+}
+
+/* Method */
+.method{
+    width: 100px;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+
+/* Submit */
+.submit__button{
+    background-color: #fff;
+    border: none;
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: 'Cairo', 'sans-serif';
+}
+
+
+

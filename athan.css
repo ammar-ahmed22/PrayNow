@@ -1,0 +1,148 @@
+/* Variable Declaration */
+:root {
+    --black: #161516;
+    --darkest-blue: #244d70;
+    --dark-blue: #465a6b;
+    --brown: #4C3F30;
+    --blue: #123c87;
+}
+
+/* Base Settings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid var(--darkest-blue);
+}
+
+::placeholder{
+    color: #ffffff;
+}
+
+
+body{
+    width: 600px;
+    height: 275px;
+    margin: 10px;
+    padding: 0;
+    background-color: var(--blue);
+    font-family: 'Cairo', 'sans-serif';
+}
+
+
+/* Header */
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heading{
+    color: var(--black);
+    font-size: 32px;
+    padding-right: 5px;
+}
+
+.now__heading{
+    color: #FFFFFF;
+    
+}
+
+.icon{
+    height: 32px;
+    padding-left: 5px;
+
+}
+
+/* Form */
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.submit__div{
+    display: flex;
+    justify-content: center;
+}
+
+/* Settings Link */
+.settings__link{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 32px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Prayer Cards */
+.prayers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+}
+
+.prayer__card{
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 25px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.shadow{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    top: 230px;
+    
+}
+
+.prayer__images{
+    width: 80px;
+    color: var(--darkest-blue);
+}
+
+.prayer__time{
+    font-size: 24px;
+}
+
+/* Location Tag */
+.location{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 6.5px;
+    color: #ffffff;
+}
+
+/* Date Tag */
+.date{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    font-size: 6.5px;
+    color: #ffffff;
+}
+
+.islamic__date{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 6.5px;
+}
+
