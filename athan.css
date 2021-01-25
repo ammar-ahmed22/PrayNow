@@ -145,4 +145,17 @@ body{
     color: #ffffff;
     font-size: 6.5px;
 }
-
+/* Next Prayer */
+.next__prayer{
+    position: relative;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-50%);
+    text-align: center;
+    background-color: #fff;
+    color: var(--black);
+    font-size: 10px;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 15px;
+}

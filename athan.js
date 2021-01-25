@@ -32,6 +32,9 @@ chrome.storage.local.get(["city", "country", "school", 'method'], function(resul
     }else{
         apiPath = `http://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=2&school=${schoolOfThought}`;
     }
+
+    var dateObj = new Date;
+
     var Fajr = document.getElementById('fajr');
     var Zuhr = document.getElementById('zuhr');
     var Asr = document.getElementById('asr');
@@ -49,6 +52,16 @@ chrome.storage.local.get(["city", "country", "school", 'method'], function(resul
         var athanTime = athanApi.data.timings;
         var selecterr = 'Set location in settings!';
 
+        var fajrTime = athanTime.Fajr;
+        var zuhrTime = athanTime.Dhuhr;
+        var asrTime = athanTime.Asr;
+        var magribTime = athanTime.Maghrib;
+        var ishaTime = athanTime.Isha;
+
+        var time = [dateObj.getHours(), dateObj.getMinutes()];        
+
+        var next = nextPrayer(time, fajrTime, zuhrTime, asrTime, magribTime, ishaTime);
+        
         var date = athanApi.data.date;
         if (athanApi.code == 200){
 
@@ -131,6 +144,22 @@ chrome.storage.local.get(["city", "country", "school", 'method'], function(resul
                 <div class="shadow"></div>`;
             }
 
+            if (next.prayer == 'fajr'){
+                Fajr.style.backgroundColor = '#2196f3';
+                Fajr.style.color = "#fff";
+            }else if (next.prayer == 'zuhr'){
+                Zuhr.style.backgroundColor = '#2196f3';
+                Zuhr.style.color = "#fff"
+            }else if (next.prayer == 'asr'){
+                Asr.style.backgroundColor = '#2196f3';
+                Asr.style.color = "#fff"
+            }else if (next.prayer == 'magrib'){
+                Magrib.style.backgroundColor = '#2196f3';
+                Magrib.style.color = "#fff"
+            }else if (next.prayer == 'isha'){
+                Isha.style.backgroundColor = '#2196f3';
+                Isha.style.color = '#fff'
+            }
             
         }else{
                 Fajr.innerHTML = `<h1 class="prayer__heading">
@@ -199,3 +228,99 @@ function formatTime(time){
 }
 
 
+//Function to check which prayer is next
+
+function nextPrayer(time, fajr, zuhr, asr, magrib, isha){
+    let fajrTime = [parseInt(fajr.slice(0, 2)), parseInt(fajr.slice(3,5))];
+    let zuhrTime = [parseInt(zuhr.slice(0, 2)), parseInt(zuhr.slice(3,5))];
+    let asrTime = [parseInt(asr.slice(0, 2)), parseInt(asr.slice(3,5))];
+    let magribTime = [parseInt(magrib.slice(0, 2)), parseInt(zuhr.slice(3,5))];
+    let ishaTime = [parseInt(isha.slice(0, 2)), parseInt(isha.slice(3,5))];
+
+    if (time[0] <= fajrTime[0] && time[1] < fajrTime[1]){
+        return {
+            'prayer':'fajr',
+            'hour': fajrTime[0],
+            'minute': fajrTime[1]
+        }
+    }else if (time[0] == fajrTime[0] && time[1] > fajrTime[1]){
+        return {
+            'prayer':'zuhr',
+            'hour': zuhrTime[0],
+            'minute': zuhrTime[1]
+        }
+    }else if (time[0] <= zuhrTime[0] && time[1] < zuhrTime[1]){
+        return {
+            'prayer':'zuhr',
+            'hour': zuhrTime[0],
+            'minute': zuhrTime[1]
+        }
+    }else if (time[0] == zuhrTime[0] && time[1] > zuhrTime[1]){
+        return {
+            'prayer':'asr',
+            'hour': asrTime[0],
+            'minute': asrTime[1]
+        }
+    }else if (time[0] <= asrTime[0] && time[1] < asrTime[1]){
+        return {
+            'prayer':'asr',
+            'hour': asrTime[0],
+            'minute': asrTime[1]
+        }
+    }else if (time[0] == asrTime[0] && time[1] > asrTime[1]){
+        return {
+            'prayer':'magrib',
+            'hour': magribTime[0],
+            'minute': magribTime[1]
+        }
+    }else if (time[0] <= magribTime[0] && time[1] < magribTime[1]){
+        return {
+            'prayer':'magrib',
+            'hour': magribTime[0],
+            'minute': magribTime[1]
+        }
+    }else if (time[0] == magribTime[0] && time[1] > magribTime[1]){
+        return {
+            'prayer':'isha',
+            'hour': ishaTime[0],
+            'minute': ishaTime[1]
+        }
+    }else if (time[0] <= ishaTime[0] && time[1] < ishaTime[1]){
+        return {
+            'prayer':'isha',
+            'hour': ishaTime[0],
+            'minute': ishaTime[1]
+        }
+    }else if (time[0] == ishaTime[0] && time[1] > ishaTime[1]){
+        return {
+            'prayer': 'fajr',
+            'hour': fajrTime[0],
+            'minute': fajrTime[1]
+        };
+    }else{
+        return {
+            'prayer': 'fajr',
+            'hour': fajrTime[0],
+            'minute': fajrTime[1]
+        };
+    }
+
+}
+
+
+//Function to convert seconds to hours and mins
+
+function toHour(seconds){
+    let hour = (seconds/3600)  % 24;
+    let minutes = ((seconds - hour)/60) % 60
+    return [hours, minutes];
+}
+
+// Function to calculate time remaining
+function hoursRem(hour, min, targetHour, targetMin){
+    let sec = (hours*3600) + (min * 60);
+    let secTar = (targetHour * 3600) + (targetMin * 60);
+    let rem = secTar - sec;
+
+
+}
