@@ -2,9 +2,11 @@
 :root {
     --black: #161516;
     --darkest-blue: #244d70;
-    --dark-blue: #465a6b;
+    --dark-blue: #1c243c;
     --brown: #4C3F30;
     --blue: #123c87;
+    --pink: #FF6961;
+    --grey: #6D6D6D;
 }
 
 /* Base Settings */
@@ -26,12 +28,12 @@ input{
 
 
 body{
-    width: 600px;
-    height: 275px;
+    width: 300px;
+    height: 325px;
     margin: 10px;
     padding: 0;
-    background-color: var(--blue);
-    font-family: 'Cairo', 'sans-serif';
+    background-color: #FFF;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -45,13 +47,13 @@ body{
 
 
 .heading{
-    color: var(--black);
-    font-size: 32px;
+    color: var(--dark-blue);
+    font-size: 24px;
     padding-right: 5px;
 }
 
 .now__heading{
-    color: #FFFFFF;
+    color: var(--pink);
     
 }
 
@@ -88,15 +90,36 @@ body{
 /* Prayer Cards */
 .prayers{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     list-style-type: none;
+    margin-top: 20px;
 }
 
 .prayer__card{
     text-align: center;
     background-color: #FFFFFF;
-    margin: 25px 5px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px 5px 2px 5px;
+    padding: 10px;
     border-radius: 10px;
+    color: var(--grey);
+}
+
+
+.prayer__heading{
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.next__prayer{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.md-12{
+    font-size: 12px;
 }
 
 .shadow{
@@ -117,36 +140,54 @@ body{
 }
 
 .prayer__time{
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 /* Location Tag */
 .location{
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 50px;
+    right: 25px;
     font-size: 6.5px;
-    color: #ffffff;
+    color: var(--grey);
+}
+
+.location__heading{
+    font-weight: 200;
+
+}
+
+#location-icon{
+    color: var(--pink);
 }
 
 /* Date Tag */
 .date{
     position: absolute;
-    top: 30px;
-    left: 10px;
+    top: 50px;
+    right: 25px;
     font-size: 6.5px;
-    color: #ffffff;
+    color: var(--grey);
 }
 
 .islamic__date{
     position: absolute;
     top: 50px;
-    left: 10px;
-    color: #ffffff;
+    left: 25px;
+    color: var(--grey);
     font-size: 6.5px;
 }
+
+.isl-date{
+    font-weight: 200;
+}
+
+#isl-cal-icon{
+    color: var(--pink);
+}
 /* Next Prayer */
-.next__prayer{
+/* .next__prayer{
     position: relative;
     left: 50%;
     bottom: 2%;
@@ -158,4 +199,4 @@ body{
     width: 300px;
     border-radius: 20px;
     margin-top: 15px;
-}
+} */
