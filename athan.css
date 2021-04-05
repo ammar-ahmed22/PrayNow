@@ -29,7 +29,7 @@ input{
 
 body{
     width: 300px;
-    height: 325px;
+    height: 300px;
     margin: 10px;
     padding: 0;
     background-color: #FFF;
@@ -77,10 +77,10 @@ body{
 /* Settings Link */
 .settings__link{
     position: absolute;
-    top: 0px;
+    top: 10px;
     right: 10px;
-    font-size: 32px;
-    color: #ffffff;
+    font-size: 18px;
+    color: var(--pink);
     text-decoration: none;
     cursor: pointer;
 }
@@ -92,7 +92,7 @@ body{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     list-style-type: none;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .prayer__card{
@@ -116,11 +116,9 @@ body{
 .next__prayer{
     font-size: 12px;
     font-weight: 100;
+    color: #fff;
 }
 
-.md-12{
-    font-size: 12px;
-}
 
 .shadow{
     position: absolute;
@@ -147,7 +145,7 @@ body{
 /* Location Tag */
 .location{
     position: absolute;
-    top: 50px;
+    top: 55px;
     right: 25px;
     font-size: 6.5px;
     color: var(--grey);
@@ -165,7 +163,7 @@ body{
 /* Date Tag */
 .date{
     position: absolute;
-    top: 50px;
+    top: 55px;
     right: 25px;
     font-size: 6.5px;
     color: var(--grey);
@@ -173,7 +171,7 @@ body{
 
 .islamic__date{
     position: absolute;
-    top: 50px;
+    top: 55px;
     left: 25px;
     color: var(--grey);
     font-size: 6.5px;
