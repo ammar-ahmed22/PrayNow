@@ -88,21 +88,25 @@ chrome.storage.local.get(["city", "country", "school", 'method'], function(resul
                 Zuhr.innerHTML = `<h1 class="prayer__heading" >
                 Zuhr
                 </h1>
+                <h1 class=next__prayer>${msToTime(next.timeTo)[2]}hrs${msToTime(next.timeTo)[1]}m</h1>
                 <h1 class="prayer__time">${formatTime(athanTime.Dhuhr)}</h1>`;
 
                 Asr.innerHTML = `<h1 class="prayer__heading">
                 Asr
                 </h1>
+                <h1 class=next__prayer>${msToTime(next.timeTo)[2]}hrs${msToTime(next.timeTo)[1]}m</h1>
                 <h1 class="prayer__time">${formatTime(athanTime.Asr)}</h1>`;
 
                 Magrib.innerHTML = `<h1 class="prayer__heading" id="magrib">
                 Magrib
                 </h1>
+                <h1 class=next__prayer>${msToTime(next.timeTo)[2]}hrs${msToTime(next.timeTo)[1]}m</h1>
                 <h1 class="prayer__time">${formatTime(athanTime.Maghrib)}</h1>`;
 
                 Isha.innerHTML = `<h1 class="prayer__heading">
                 Isha
                 </h1>
+                <h1 class=next__prayer>${msToTime(next.timeTo)[2]}hrs${msToTime(next.timeTo)[1]}m</h1>
                 <h1 class="prayer__time">${formatTime(athanTime.Isha)}</h1>`;
             }else{
                 Fajr.innerHTML = `<h1 class="prayer__heading">

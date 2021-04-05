@@ -33,11 +33,11 @@ input{
 
 
 body{
-    width: 600px;
-    height: 275px;
+    width: 300px;
+    height: 300px;
     margin: 0;
     padding: 0;
-    background-color: var(--blue);
+    background-color: #fff;
     font-family: 'Cairo', 'sans-serif';
 }
 
