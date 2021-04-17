@@ -7,8 +7,8 @@
     --dark-blue: #465a6b;
     --brown: #4C3F30;
     --blue: #123c87;
-    --pink: #FF6961;
-    --pinkTransp: rgba(255, 105, 97, 0.6);
+    --green: #6db038;
+    --greenTransp: rgba(109, 176, 56, 0.6);
     --grey: #6d6d6d;
 }
 
@@ -22,7 +22,7 @@
 input{
     background: transparent;
     border: 0.1px solid rgba(0,0,0,.2);
-    color: var(--pink);
+    color: var(--green);
     text-align: center;
     font-family: "Roboto", sans-serif;
     width: 60px;
@@ -32,7 +32,7 @@ input{
 }
 
 ::placeholder{
-    color: var(--pink);
+    color: var(--green);
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
@@ -80,7 +80,7 @@ body{
 }
 
 .setting__heading-cont{
-    background-color: var(--pinkTransp);
+    background-color: var(--greenTransp);
     width: 300px;
     height: 40px;
     display: flex;
@@ -171,7 +171,7 @@ label:after {
 }
 
 input:checked + label {
-	background: #2196f3;
+	background: var(--green);
 }
 
 input:checked + label:after {
@@ -196,7 +196,7 @@ label:active:after {
 
 /* Submit */
 .submit__button{
-    background-color: var(--pinkTransp);
+    background-color: var(--greenTransp);
     border: none;
     color: #fff;
     text-decoration: none;

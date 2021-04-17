@@ -5,7 +5,7 @@
     --dark-blue: #1c243c;
     --brown: #4C3F30;
     --blue: #123c87;
-    --pink: #FF6961;
+    --green: #6db038;
     --grey: #6D6D6D;
 }
 
@@ -53,7 +53,7 @@ body{
 }
 
 .now__heading{
-    color: var(--pink);
+    color: var(--green);
     
 }
 
@@ -80,7 +80,7 @@ body{
     top: 10px;
     right: 10px;
     font-size: 18px;
-    color: var(--pink);
+    color: var(--green);
     text-decoration: none;
     cursor: pointer;
 }
@@ -157,7 +157,7 @@ body{
 }
 
 #location-icon{
-    color: var(--pink);
+    color: var(--green);
 }
 
 /* Date Tag */
@@ -182,7 +182,7 @@ body{
 }
 
 #isl-cal-icon{
-    color: var(--pink);
+    color: var(--green);
 }
 /* Next Prayer */
 /* .next__prayer{

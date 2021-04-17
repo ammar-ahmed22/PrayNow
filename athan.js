@@ -136,19 +136,19 @@ chrome.storage.local.get(["city", "country", "school", 'method'], function(resul
             }
 
             if (next.prayer == 'Fajr'){
-                Fajr.style.backgroundColor = 'rgba(255, 105, 97, 0.8)';
+                Fajr.style.backgroundColor = 'rgba(109, 176, 56, 0.6)';
                 Fajr.style.color = "#fff";
             }else if (next.prayer == 'Dhuhr'){
-                Zuhr.style.backgroundColor = 'rgba(255, 105, 97, 0.8)';
+                Zuhr.style.backgroundColor = 'rgba(109, 176, 56, 0.6)';
                 Zuhr.style.color = "#fff"
             }else if (next.prayer == 'Asr'){
-                Asr.style.backgroundColor = 'rgba(255, 105, 97, 0.8)';
+                Asr.style.backgroundColor = 'rgba(109, 176, 56, 0.6)';
                 Asr.style.color = "#fff"
             }else if (next.prayer == 'Maghrib'){
-                Magrib.style.backgroundColor = 'rgba(255, 105, 97, 0.8)';
+                Magrib.style.backgroundColor = 'rgba(109, 176, 56, 0.6)';
                 Magrib.style.color = "#fff"
             }else if (next.prayer == 'Isha'){
-                Isha.style.backgroundColor = 'rgba(255, 105, 97, 0.8)';
+                Isha.style.backgroundColor = 'rgba(109, 176, 56, 0.6)';
                 Isha.style.color = '#fff'
             }
             
